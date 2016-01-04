@@ -4,8 +4,8 @@
 'use strict'
 
 export default class RentingController {
-    constructor() {
-        var renting = this;
+    constructor($stateParams) {
+        //var renting = this;
 
         $(function() {
             $('.slider').slider({
@@ -19,19 +19,20 @@ export default class RentingController {
         $('.button-collapse').sideNav('hide');
         $("#relatedRentItems").owlCarousel();
 
-        renting.search = "Search here";
-        renting.Items = [];
-        renting.HouseItems = [];
-        renting.Reviews = [];
+        this.searchQuery = "Search here";
+        this.searchResults = [];
 
-        for (var i = 0; i < 40; i++)
-            renting.Items.push(i);
+        this.searchResults = $stateParams.queryResult;
+        console.log("received results =" +renting.results);
 
-        for (var i = 0; i < 6; i++)
-            renting.HouseItems.push(i);
+        //for (var i = 0; i < this.searchResults.length; i++)
+        //    this.searItems.push(i);
 
-        for (var i = 0; i < 10; i++)
-            renting.Reviews.push(i);
+        //for (var i = 0; i < 6; i++)
+        //    renting.HouseItems.push(i);
+        //
+        //for (var i = 0; i < 10; i++)
+        //    renting.Reviews.push(i);
 
 
 

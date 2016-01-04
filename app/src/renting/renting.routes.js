@@ -11,6 +11,9 @@ export default rentingHileModule => {
     $stateProvider
             .state('renting', {
               url: '/renting',
+              params:{
+                queryResult : []
+              },
               template: require('./rentSearchResults.html'),
               controller: 'RentingController as renting'
             })

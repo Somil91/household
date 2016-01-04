@@ -9,7 +9,7 @@ export default hileModule => {
 
   const routerConfig = function($stateProvider, $urlRouterProvider) {
     // Use $stateProvider to configure your states.
-    $urlRouterProvider.otherwise('/')
+    $urlRouterProvider.otherwise('/hile')
 
   };
 

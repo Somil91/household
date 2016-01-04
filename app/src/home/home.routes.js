@@ -10,7 +10,7 @@ export default homeHileModule => {
     // Use $stateProvider to configure your states.
     $stateProvider
             .state('home', {
-              url: '/',
+              url: '/hile',
               template: require('./home.html'),
               controller: 'HomeController as home'
             })
